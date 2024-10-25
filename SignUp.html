@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Sign-Up Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('bg.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .signup-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .signup-container h1, .signup-container h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
+        .signup-container p {
+            color: white;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .signup-container a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>FundRaising App</h1>
+        <h3>Sign-Up Page</h3>
+        <form action="/signup_post" method="POST">
+            <label for="name" style="color: white;">Your name:</label>
+            <input type="text" name="name" placeholder="Enter your Full Name" required>
+            <label for="email" style="color: white;">Email ID:</label>
+            <input type="email" name="email" placeholder="Enter your Email ID" required>
+            <label for="password" style="color: white;">Password:</label>
+            <input type="password" name="password" placeholder="Enter your Password" required>
+            <label for="confirm_password" style="color: white;">Confirm Password:</label>
+            <input type="password" name="confirm_password" placeholder="Confirm your Password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Already registered? <a href="SignIn.html">Click Here!</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraiser</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ffffff, #e8f8f8);
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid #ddd;
+            position: sticky; /* Keeps the navbar at the top */
+            top: 0; /* Ensures it sticks to the top */
+            background-color: rgba(255, 255, 255, 0.9); /* Light background for navbar */
+            z-index: 1000; /* Keeps it above other content */
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            left: 50px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 300;
+        }
+        .navbar ul li a.active {
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Reduced padding for scrolling */
+            flex-direction: column; /* Align items vertically */
+            height: 100vh; /* Full height of viewport */
+        }
+        .content .text {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            text-align: center; /* Center text */
+            margin: 20px 0; /* Margin for spacing */
+        }
+        .content .images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0; /* Margin for spacing */
+        }
+        .content .images img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .content .images .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* Additional content to ensure scrolling */
+        .additional-content {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto; /* Center the additional content */
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">FUNDRAISER</div>
+        <ul>
+
+            <li><a href="funds.html" target="_top">Events</a></li>
+            <li><a href="funds-event.html" target="_top">Funds</a></li>
+            <li><a href="SignIn.html" target="_top">Sign-in</a></li>
+            <li><a href="SignUp.html" target="_top">Sign-up</a></li>
+            <li style="float:right"><a class="active" href="about.html" target="_top">About</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="text">
+            <span>Support</span>
+            <span>Our Cause</span>
+        </div>
+        <div class="images">
+            <img alt="Group of volunteers planting trees" src="https://storage.googleapis.com/a1aa/image/eyvCr9ZChY3Vaqe66JSamkp8204xEDUrGDzijzzd2CzQMIqTA.jpg"/>
+            <div class="logo"></div>
+            <img alt="Children holding hands in a circle" src="https://storage.googleapis.com/a1aa/image/Qea52LGoQa3wFykfnfiecFuxHwuLQFzsJ9WJO7iIAsp6wgoOB.jpg"/>
+        </div>
+        <div class="text">
+            <span>Make a</span>
+            <span>Difference</span>
+        </div>
+    </div>
+    <!-- Additional content for scrolling -->
+    <div class="additional-content">
+        <h2>Get Involved</h2>
+        <p>Your support makes a difference. Join us in our mission to make the world a better place. Whether through donations, volunteering, or spreading the word, every action counts!</p>
+        <h2>Upcoming Events</h2>
+        <p>Check out our upcoming fundraising events and how you can participate. Together, we can achieve great things!</p>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us. We're here to help!</p>
+    </div>
+</body>
+</html>

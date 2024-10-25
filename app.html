@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="Section 1" align="center">
+        <h1>Fundraising App</h1>
+        <hr>
+        <form action="/app_post" method="POST">
+            <fieldset>
+                <legend>Where to get Fund?</legend>
+
+                <label for="name">Company Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                <br><br>
+
+                <label for="email">Email ID:</label>
+                <input type="email" name="email" required placeholder="Your Email">
+                <br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
+                <br><br>
+
+                <label for="dob">Fund required before:</label>
+                <input type="date" name="delivery_date" required>
+                <br><br>
+
+                <label for="address">Address:</label>
+                <textarea rows="5" cols="20" name="address"></textarea>
+                <br><br>
+
+                <label for="Fundss">For which reason?</label>
+                <input type="checkbox" name="Fundss" value="Event">Event
+                <input type="checkbox" name="Fundss" value="Fest">Fest
+                <input type="checkbox" name="Fundss" value="Startup">Startup
+                <input type="checkbox" name="Fundss" value="Charity">Charity
+                <input type="checkbox" name="Fundss" value="Others">Others
+                <br><br>
+
+                <label for="payment_type">Payment Type:</label>
+                <input type="radio" name="payment_type" value="Cash">Cash
+                <input type="radio" name="payment_type" value="Credit Card">Credit Card
+                <input type="radio" name="payment_type" value="Debit Card">Debit Card
+                <input type="radio" name="payment_type" value="UPI">UPI
+                <br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

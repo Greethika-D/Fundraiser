@@ -1,0 +1,227 @@
+<html>
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .image-container {
+            margin-right: 50px;
+        }
+        .image-container img {
+            width: 400px;
+            height: auto;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.2);
+            text-align: center;
+        }
+        .form-container h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-container p {
+            margin: 10px 0 20px;
+            color: #666;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container form .input-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .form-container form .input-group input {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 16px;
+        }
+        .form-container form .input-group .icon-input {
+            display: flex;
+            align-items: center;
+            width: 48%;
+            position: relative;
+        }
+        .form-container form .input-group .icon-input input {
+            width: 100%;
+            padding-right: 30px;
+        }
+        .form-container form .input-group .icon-input i {
+            position: absolute;
+            right: 10px;
+            color: #666;
+        }
+        .form-container form .input-group .icon-input input[type="number"] {
+            padding-right: 30px;
+        }
+        .form-container form textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .form-container form select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .form-container form button {
+            background: white;
+            border: 2px solid black;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .form-container form button i {
+            margin-left: 10px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 1000;
+        }
+        .popup h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+  </style>
+  <script>
+   function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="image-container">
+    <img alt="A group of volunteers planting trees in a park" height="400" src="https://storage.googleapis.com/a1aa/image/cN68QAHfV8UfBkISWJHUsEJi1qMIwjw18bJdmrcEtlEHfRUnA.jpg" width="400"/>
+   </div>
+   <div class="form-container">
+    <h2>
+     MAKE A DONATION
+    </h2>
+    <p>
+     For Further Questions, Please Call
+    </p>
+    <form onsubmit="event.preventDefault(); showPopup();">
+     <div class="input-group">
+      <input placeholder="First Name" type="text"/>
+      <input placeholder="Last Name" type="text"/>
+     </div>
+     <div class="input-group">
+      <input placeholder="Email" type="email"/>
+      <div class="icon-input">
+       <input placeholder="Donation Amount" type="number"/>
+       <i class="fas fa-dollar-sign">
+       </i>
+      </div>
+     </div>
+     <select>
+      <option value="blood-donation">
+       BLOOD DONATION
+      </option>
+      <option value="scholarship-fund">
+       SCHOLARSHIP FUND
+      </option>
+      <option value="medical-aid">
+       MEDICAL AID
+      </option>
+      <option value="education-support">
+       EDUCATION SUPPORT
+      </option>
+      <option value="disaster-relief">
+       DISASTER RELIEF
+      </option>
+      <option value="animal-rescue">
+       ANIMAL RESCUE
+      </option>
+      <option value="community-development">
+       COMMUNITY DEVELOPMENT
+      </option>
+      <option value="environmental-conservation">
+       ENVIRONMENTAL CONSERVATION
+      </option>
+     </select>
+     <textarea placeholder="Message" rows="4">
+     </textarea>
+     <button type="submit">
+      DONATE NOW
+      <i class="fas fa-arrow-right">
+      </i>
+     </button>
+    </form>
+   </div>
+  </div>
+  <div class="overlay" id="overlay">
+  </div>
+  <div class="popup" id="popup">
+   <h3>
+    Thanks for Donating!
+   </h3>
+   <button onclick="closePopup()">
+    Close
+   </button>
+  </div>
+ </body>
+</html>

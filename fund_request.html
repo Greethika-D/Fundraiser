@@ -1,0 +1,196 @@
+<html>
+ <head>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #f8f8f8, #ffffff);
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .image-container {
+            margin-right: 50px;
+        }
+        .image-container img {
+            width: 400px;
+            height: auto;
+        }
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(128, 0, 128, 0.2);
+            text-align: center;
+            max-height: 500px;
+            overflow-y: auto;
+            width: 400px;
+        }
+        .form-container h1 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .form-container .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        .form-container .form-group input,
+        .form-container .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-container .form-group .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container .form-group .form-col {
+            width: 48%;
+        }
+        .form-container .submit-button {
+            background: #fff;
+            border: 1px solid #000;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .form-container .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+  </style>
+  <script>
+   function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('thank-you-message').style.display = 'block';
+        }
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="image-container">
+    <img alt="Fundraiser image" height="300" src="https://storage.googleapis.com/a1aa/image/x19Z1Pyn8fRBbKfve6bJZfNJCpUAN3oNdaGePZvV58vUSPRdC.jpg" width="400"/>
+   </div>
+   <div class="form-container">
+    <h1 class="title">
+     Fund Request Form
+    </h1>
+    <form onsubmit="handleSubmit(event)">
+     <div class="form-group">
+      <label for="name">
+       Name
+      </label>
+      <input id="name" name="name" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="contact">
+       Contact Information (Email, Phone)
+      </label>
+      <input id="contact" name="contact" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="department">
+       Department/Organization
+      </label>
+      <input id="department" name="department" required="" type="text"/>
+     </div>
+     <div class="form-group">
+      <label for="purpose">
+       Purpose of the Request
+      </label>
+      <textarea id="purpose" name="purpose" required="" rows="3"></textarea>
+     </div>
+     <div class="form-group">
+      <label for="amount">
+       Amount Requested
+      </label>
+      <input id="amount" name="amount" required="" type="number"/>
+     </div>
+     <div class="form-group">
+      <label for="date-needed">
+       Date Needed By
+      </label>
+      <input id="date-needed" name="date-needed" required="" type="date"/>
+     </div>
+     <div class="form-group">
+      <label for="total-budget">
+       Total Project Budget
+      </label>
+      <input id="total-budget" name="total-budget" required="" type="number"/>
+     </div>
+     <div class="form-group">
+      <label for="breakdown">
+       Breakdown of Costs (e.g., materials, labor, other expenses)
+      </label>
+      <textarea id="breakdown" name="breakdown" required="" rows="3"></textarea>
+     </div>
+     <div class="form-group">
+      <label for="justification">
+       Explanation of why the funds are needed
+      </label>
+      <textarea id="justification" name="justification" required="" rows="3"></textarea>
+     </div>
+     <div class="form-group">
+      <label for="outcomes">
+       Expected outcomes or benefits
+      </label>
+      <textarea id="outcomes" name="outcomes" required="" rows="3"></textarea>
+     </div>
+     <div class="form-group">
+      <label for="approvals">
+       Approval Signatures
+      </label>
+      <div class="form-row">
+       <div class="form-col">
+        <input id="supervisor-signature" name="supervisor-signature" placeholder="Supervisor Signature" required="" type="text"/>
+       </div>
+       <div class="form-col">
+        <input id="finance-signature" name="finance-signature" placeholder="Finance Department Signature" required="" type="text"/>
+       </div>
+      </div>
+     </div>
+     <div class="form-group">
+      <label for="attachments">
+       Attachments (Any supporting documents)
+      </label>
+      <input id="attachments" name="attachments" type="file"/>
+     </div>
+     <div class="form-group">
+      <label for="date-submitted">
+       Date Submitted
+      </label>
+      <input id="date-submitted" name="date-submitted" required="" type="date"/>
+     </div>
+     <button class="submit-button" type="submit">
+      Submit Form
+     </button>
+    </form>
+    <div class="thank-you-message" id="thank-you-message">
+     Thank You for Your Submission!
+     <br/>
+     Your fund request has been successfully submitted. We will review your request and get back to you shortly. If you have any questions in the meantime, please feel free to contact us.
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
